@@ -35,7 +35,6 @@ public class ProductService {
         this.tagRepository = tagRepository;
     }
 
-    // CREATE
     public ProductResponse createProduct(ProductRequest request) {
         Category category = categoryRepository.findById(request.getCategoryId())
                 .orElseThrow(() -> new RuntimeException("Category not found"));
