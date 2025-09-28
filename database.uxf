@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>399</x>
+      <y>21</y>
+      <w>119</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes> users 
+--
+id (PK)
+email
+password
+full_name  
+phone
+avatar_url
+...
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>28</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>roles
+--
+id (PK)
+name
+
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>427</x>
+      <y>161</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Addresses
+--
+id (PK)
+user_id (FK)
+full_address
+phone
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>427</x>
+      <y>259</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>categories
+--
+id (PK)
+name
+parent_id (FK)
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>273</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>products
+--
+id (PK)
+title
+décription
+category_id(FK)
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>721</x>
+      <y>280</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>product_images
+--
+id (PF)
+product_id (Fk)
+url
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>574</x>
+      <y>518</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>order_items
+--
+id (PK)
+order_id (FK)
+listing_id (Fk)
+rental_start
+rental_end
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>525</y>
+      <w>91</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>listings
+--
+id (PK)
+product_id (FK)
+owner_ID (FK)
+sku
+size
+color
+price_per_day
+status
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>672</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>orders
+--
+id (PK)
+order_number
+user_id (FK)
+address_id (FK)
+status
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>672</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>payments
+--
+id (PK)
+order_id (FK)
+amount
+status
+bg=#dddddd
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>511</x>
+      <y>63</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>119</y>
+      <w>35</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>511</x>
+      <y>294</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>679</x>
+      <y>301</y>
+      <w>56</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>560</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>497</x>
+      <y>700</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+</diagram>
